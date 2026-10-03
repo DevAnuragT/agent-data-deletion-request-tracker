@@ -1,0 +1,59 @@
+{
+  "name": "review-data-deletion-request-tracker",
+  "description": "Run Data Deletion Request Tracker",
+  "version": "0.1.0",
+  "input_schema": {
+    "type": "object",
+    "properties": {
+      "payload": {
+        "type": "object",
+        "properties": {
+          "request_id": {
+            "type": "string",
+            "description": "request id"
+          },
+          "verified_data_scope": {
+            "type": "array",
+            "description": "verified data scope"
+          },
+          "due_date": {
+            "type": "string",
+            "description": "due date"
+          },
+          "request_status": {
+            "type": "string",
+            "description": "request status"
+          }
+        },
+        "required": [
+          "request_id",
+          "verified_data_scope",
+          "due_date",
+          "request_status"
+        ]
+      }
+    },
+    "required": [
+      "payload"
+    ]
+  },
+  "output_schema": {
+    "type": "object",
+    "properties": {
+      "status": {
+        "type": "string"
+      },
+      "score": {
+        "type": "object"
+      },
+      "findings": {
+        "type": "array"
+      }
+    }
+  },
+  "implementation": {
+    "type": "script",
+    "path": "review-data-deletion-request-tracker.py",
+    "runtime": "python3"
+  }
+}

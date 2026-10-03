@@ -1,0 +1,8 @@
+{
+  "request_id": "evidence-record",
+  "verified_data_scope": [
+    "record-1"
+  ],
+  "due_date": "2026-10-03",
+  "request_status": "evidence-record"
+}

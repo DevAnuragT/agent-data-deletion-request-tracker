@@ -1,0 +1,29 @@
+{
+  "slug": "data-deletion-request-tracker",
+  "title": "Data Deletion Request Tracker",
+  "category": "privacy",
+  "description": "Review deletion requests for scope, deadline, and completion state.",
+  "fields": {
+    "request_id": {
+      "label": "request id",
+      "kind": "required",
+      "minimum": 0
+    },
+    "verified_data_scope": {
+      "label": "verified data scope",
+      "kind": "list",
+      "minimum": 1
+    },
+    "due_date": {
+      "label": "due date",
+      "kind": "date",
+      "minimum": 0
+    },
+    "request_status": {
+      "label": "request status",
+      "kind": "required",
+      "minimum": 0
+    }
+  },
+  "limitations": "Uses caller-provided evidence only; cannot confirm external facts. Human review remains required."
+}
